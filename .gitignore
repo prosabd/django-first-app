@@ -27,16 +27,16 @@ local_settings.py
 .cache/
 
 # Fichiers et dossiers de la compilation
-*.compiled
-compiled/
+# *.compiled
+# compiled/
 
 # Fichiers et dossiers de la documentation
-docs/
-doc/
+# docs/
+# doc/
 
 # Fichiers et dossiers de la mise en page
-staticfiles/
-media/
+# staticfiles/
+# media/
 
 # Fichiers et dossiers de la gestion des erreurs
 *.err
@@ -47,156 +47,156 @@ logs/
 *.log
 
 # Fichiers et dossiers de la gestion des tests
-tests/
-test/
+# tests/
+# test/
 
 # Fichiers et dossiers de la gestion des migrations
-migrations/
-*.migration
+# migrations/
+# *.migration
 
 # Fichiers et dossiers de la gestion des données
-data/
-*.data
+# data/
+# *.data
 
 # Fichiers et dossiers de la gestion des médias
-media/
-*.media
+# media/
+# *.media
 
 # Fichiers et dossiers de la gestion des statiques
-static/
-*.static
+# static/
+# *.static
 
 # Fichiers et dossiers de la gestion des templates
-templates/
-*.template
+# templates/
+# *.template
 
 # Fichiers et dossiers de la gestion des urls
-urls/
-*.url
+# urls/
+# *.url
 
 # Fichiers et dossiers de la gestion des vues
-views/
-*.view
+# views/
+# *.view
 
 # Fichiers et dossiers de la gestion des modèles
-models/
-*.model
+# models/
+# *.model
 
 # Fichiers et dossiers de la gestion des formulaires
-forms/
-*.form
+# forms/
+# *.form
 
 # Fichiers et dossiers de la gestion des administrateurs
-admin/
-*.admin
+# admin/
+# *.admin
 
 # Fichiers et dossiers de la gestion des utilisateurs
-users/
-*.user
+# users/
+# *.user
 
 # Fichiers et dossiers de la gestion des groupes
-groups/
-*.group
+# groups/
+# *.group
 
 # Fichiers et dossiers de la gestion des permissions
-permissions/
-*.permission
+# permissions/
+# *.permission
 
 # Fichiers et dossiers de la gestion des sessions
-sessions/
-*.session
+# sessions/
+# *.session
 
 # Fichiers et dossiers de la gestion des messages
-messages/
-*.message
+# messages/
+# *.message
 
 # Fichiers et dossiers de la gestion des emails
-emails/
-*.email
+# emails/
+# *.email
 
 # Fichiers et dossiers de la gestion des téléchargements
-downloads/
-*.download
+# downloads/
+# *.download
 
 # Fichiers et dossiers de la gestion des téléchargements
-uploads/
-*.upload
+# uploads/
+# *.upload
 
 # Fichiers et dossiers de la gestion des fichiers
-files/
-*.file
+# files/
+# *.file
 
 # Fichiers et dossiers de la gestion des images
-images/
-*.image
+# images/
+# *.image
 
 # Fichiers et dossiers de la gestion des vidéos
-videos/
-*.video
+# videos/
+# *.video
 
 # Fichiers et dossiers de la gestion des sons
-sounds/
-*.sound
+# sounds/
+# *.sound
 
 # Fichiers et dossiers de la gestion des polices
-fonts/
-*.font
+# fonts/
+# *.font
 
 # Fichiers et dossiers de la gestion des styles
-styles/
-*.style
+# styles/
+# *.style
 
 # Fichiers et dossiers de la gestion des scripts
-scripts/
-*.script
+# scripts/
+# *.script
 
 # Fichiers et dossiers de la gestion des données de test
 test_data/
 *.test_data
 
 # Fichiers et dossiers de la gestion des données de démo
-demo_data/
-*.demo_data
+# demo_data/
+# *.demo_data
 
 # Fichiers et dossiers de la gestion des données de production
-production_data/
-*.production_data
+# production_data/
+# *.production_data
 
 # Fichiers et dossiers de la gestion des données de développement
 development_data/
 *.development_data
 
 # Fichiers et dossiers de la gestion des données de staging
-staging_data/
-*.staging_data
+# staging_data/
+# *.staging_data
 
 # Fichiers et dossiers de la gestion des données de préproduction
 preproduction_data/
 *.preproduction_data
 
 # Fichiers et dossiers de la gestion des données de production
-production/
-*.production
+# production/
+# *.production
 
 # Fichiers et dossiers de la gestion des données de développement
 development/
 *.development
 
 # Fichiers et dossiers de la gestion des données de staging
-staging/
-*.staging
+# staging/
+# *.staging
 
 # Fichiers et dossiers de la gestion des données de préproduction
 preproduction/
 *.preproduction
 
 # Fichiers et dossiers de la gestion des données de test
-test/
-*.test
+# test/
+# *.test
 
 # Fichiers et dossiers de la gestion des données de démo
-demo/
-*.demo
+# demo/
+# *.demo
 
 # Fichiers et dossiers de la gestion des données de production
 prod/
@@ -207,56 +207,56 @@ dev/
 *.dev
 
 # Fichiers et dossiers de la gestion des données de staging
-stage/
-*.stage
+# stage/
+# *.stage
 
 # Fichiers et dossiers de la gestion des données de préproduction
-preprod/
-*.preprod
+# preprod/
+# *.preprod
 
 # Fichiers et dossiers de la gestion des données de test
-testenv/
-*.testenv
+# testenv/
+# *.testenv
 
 # Fichiers et dossiers de la gestion des données de démo
-demoenv/
-*.demoenv
+# demoenv/
+# *.demoenv
 
 # Fichiers et dossiers de la gestion des données de production
-prodenv/
-*.prodenv
+# prodenv/
+# *.prodenv
 
 # Fichiers et dossiers de la gestion des données de développement
-devenv/
-*.devenv
+# devenv/
+# *.devenv
 
 # Fichiers et dossiers de la gestion des données de staging
-stageenv/
-*.stageenv
+# stageenv/
+# *.stageenv
 
 # Fichiers et dossiers de la gestion des données de préproduction
-preprodenv/
-*.preprodenv
+# preprodenv/
+# *.preprodenv
 
 # Fichiers et dossiers de la gestion des données de test
-testenv/
-*.testenv
+# testenv/
+# *.testenv
 
 # Fichiers et dossiers de la gestion des données de démo
-demoenv/
-*.demoenv
+# demoenv/
+# *.demoenv
 
 # Fichiers et dossiers de la gestion des données de production
-prodenv/
-*.prodenv
+# prodenv/
+# *.prodenv
 
 # Fichiers et dossiers de la gestion des données de développement
-devenv/
-*.devenv
+# devenv/
+# *.devenv
 
 # Fichiers et dossiers de la gestion des données de staging
-stageenv/
-*.stageenv
+# stageenv/
+# *.stageenv
 
 # Fichiers et dossiers de la gestion des données de préproduction
 preprodenv/
