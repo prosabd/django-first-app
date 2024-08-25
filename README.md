@@ -60,4 +60,16 @@ To set up this project locally, follow these steps:
 ## Usage
 
 You can access the admin interface at `http://127.0.0.1:8000/admin/` using the superuser credentials you created.
- -->
+
+
+   OR can access on this link : [django-project-pythonanywhere](https://prosa.pythonanywhere.com)
+
+   -- **Comptes test** --
+
+    compte user:
+    username: user-test
+    password: user-pwd
+
+    compte staff:
+    username: user-staff
+    password: user-pwd -->
