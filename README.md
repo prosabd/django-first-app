@@ -1,4 +1,4 @@
-<!-- # My First Django Project
+# My First Django Project
 
 This is my first project using Django, aimed at learning the framework and its capabilities. The project is a simple web application that demonstrates the basic features of Django, including models, views, templates, and URL routing.
 
@@ -72,4 +72,4 @@ You can access the admin interface at `http://127.0.0.1:8000/admin/` using the s
 
     compte staff:
     username: user-staff
-    password: user-pwd -->
+    password: user-pwd
