@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Django blog</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-            </ul>
-        </nav>
+{% extends 'blog/base.html' %}
 
-        <header>
-            <h1><a href="/">Django Blog</a></h1>
-        </header>
-
-        <section>
-            <h2>Posts</h2>
+{% block content_post %}
+<body>
+    <section class="container">
+        <h2>Posts</h2>
+        <div class="row">
             {% for post in posts %}
-                <article>
-                    <time>{{ post.published_date }}</time>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </article>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                            <p class="card-text"><small class="text-muted">{{ post.published_date }}</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{% url 'post_detail' pk=post.pk %}" class="card-link">Lire la suite</a>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </section>
-    </body>
-</html>
+        </div>
+    </section>
+</body>
+{% endblock content_post %}

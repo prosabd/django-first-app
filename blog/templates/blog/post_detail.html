@@ -1,0 +1,77 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/blog_post.css' %}">
+{% endblock %}
+
+
+
+{% block content_post %}
+<body>
+    <section class="container">
+        {% if post %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                        </div>
+                        {% if post.published_date %}
+                        <div class="card-footer">
+                            <p class="card-text"><small class="text-muted">Publié le {{ post.published_date|date:"d F Y à H:i" }} par : {{ post.author|upper }}</small></p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Commentaires</h3>
+                    {% for comment in post.comments.all %}
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">{{ comment.text }}</p>
+                                <p class="card-text"><small class="text-muted">Publié par {{ comment.author }} le {{ comment.published_date }}</small></p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Ajouter un commentaire</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <textarea name="text" class="form-control" placeholder="Votre commentaire" disabled></textarea>
+                        <button type="submit" class="btn btn-primary">Publier</button>
+                    </form>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Post Not Found</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sorry, the post you're looking for doesn't exist.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="{% url 'post_list' %}" class="btn btn-primary">Return to Post List</a>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+</body>
+{% endblock content_post %}
