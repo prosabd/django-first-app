@@ -1,5 +1,7 @@
 # Fichier .gitignore pour un projet Django
 
+.env
+.env.local
 generate.py
 # Fichiers et dossiers générés par Django
 *.pyc
@@ -18,7 +20,8 @@ database.db
 *.db
 
 # Fichiers et dossiers de la configuration
-#settings.py
+settings.py
+mysite/settings.py
 settings_local.py
 local_settings.py
 
