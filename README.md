@@ -73,3 +73,13 @@ You can access the admin interface at `http://127.0.0.1:8000/admin/` using the s
     compte staff:
     username: user-staff
     password: user-pwd
+
+   ### Creating Posts
+
+    To create a new post, follow these steps:
+
+    1. Go to the admin interface at `/admin` and log in with the staff account credentials
+    2. After logging in, navigate back to the main site by going to the root URL `/`.
+    3. You should now see an option to create a new post. Click on it to create your post.
+
+    Note: Only authenticated staff users can create new posts. Make sure you're logged in to access this feature.
