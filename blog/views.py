@@ -15,6 +15,8 @@ def post_detail(request, pk):
         return render(request, 'blog/post_detail.html', {'post': None}, status=404)
  
 def post_new(request):
+    if not request.user.is_authenticated:
+        return render(request, 'blog/post_new.html', {'form': None}, status=403)
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
@@ -31,6 +33,8 @@ def post_new(request):
 def post_edit(request, pk):
     try:
         post = get_object_or_404(Post, pk=pk)
+        if post.author != request.user or not request.user.is_superuser:
+            raise Http404
         if request.method == "POST":
             form = PostForm(request.POST, instance=post)
             if form.is_valid():
