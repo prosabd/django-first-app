@@ -18,7 +18,7 @@ database.db
 *.db
 
 # Fichiers et dossiers de la configuration
-settings.py
+#settings.py
 settings_local.py
 local_settings.py
 
