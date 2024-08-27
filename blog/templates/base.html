@@ -23,11 +23,13 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link top-menu-add-post" href="{% url 'post_new' %}">
                         <img src="{% static 'media/file-earmark-plus.svg' %}" alt="Add Post">
                     </a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </nav>

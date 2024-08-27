@@ -16,15 +16,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">{{ post.title }}</h2>
+                        <div class="card-header d-flex justify-content-between">
+                            <h2 class="card-title pt-2">{{ post.title }}</h2>
+                            {% if user.is_authenticated and user == post.author or user.is_superuser %}
+                            <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary">
+                                <img src="{% static 'media/pencil-fill.svg' %}" alt="Edit Post"/>
+                            </a>
+                            {% endif %}
                         </div>
                         <div class="card-body">
                             <p class="card-text">{{ post.text|linebreaksbr }}</p>
                         </div>
                         {% if post.published_date %}
                         <div class="card-footer">
-                            <p class="card-text"><small class="text-muted">Publié le {{ post.published_date|date:"d F Y à H:i" }} par : {{ post.author|upper }}</small></p>
+                            <p class="card-text"><small class="text-muted">Publié le {{ post.created_date|date:"d F Y à H:i" }} 
+                                {% if post.published_date != post.created_date %} 
+                                    (modifié le {{ post.published_date|date:"d F Y à H:i" }})
+                                {% endif %} 
+                                    par : {{ post.author|upper }}</small>
+                            </p>
                         </div>
                         {% endif %}
                     </div>
