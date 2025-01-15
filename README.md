@@ -39,22 +39,42 @@ To set up this project locally, follow these steps:
    pip install -r requirements.txt
    ```
 
-5. **Run the migrations:**
+5. **Create environment configuration:**
+   Create a `.env` file in the project root with the following variables:
+   ```properties
+   allowed_hosts=['']
+   secret_key=
+   debug=True
+   db_name=
+   db_user=
+   db_password=
+   db_host=
+   db_port=
+   ```
+   Note: You can also create `.env.local` or `.env.production` for different environments.
+
+   To generate a new secret key, you can use Python:
+   ```bash
+   python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+   ```
+   Copy the generated key and paste it as the value for `secret_key` in your `.env` file.
+
+6. **Run the migrations:**
    ```bash
    python manage.py migrate
    ```
 
-6. **Create a superuser (optional):**
+7. **Create a superuser (optional):**
    ```bash
    python manage.py createsuperuser
    ```
 
-7. **Run the development server:**
+8. **Run the development server:**
    ```bash
    python manage.py runserver
    ```
 
-8. **Access the application:**
+9. **Access the application:**
    Open your web browser and go to `http://127.0.0.1:8000/`.
 
 ## Usage
