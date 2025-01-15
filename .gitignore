@@ -2,11 +2,12 @@
 
 .env
 .env.local
+.env.production
 generate.py
 # Fichiers et dossiers générés par Django
 *.pyc
 *.log
-*.sqlite3
+# *.sqlite3
 __pycache__/
 
 # Fichiers et dossiers de l'environnement virtuel
@@ -15,13 +16,14 @@ env/
 venv/
 
 # Fichiers et dossiers de la base de données
-db.sqlite3
+# db.sqlite3
 database.db
 *.db
+initial_data.json
 
 # Fichiers et dossiers de la configuration
-settings.py
-mysite/settings.py
+# settings.py
+# mysite/settings.py
 settings_local.py
 local_settings.py
 
