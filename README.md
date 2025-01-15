@@ -15,8 +15,8 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/1-django-first-app.git
-   cd 1-django-first-app
+   git clone https://github.com/prosabd/django-first-app.git
+   cd django-first-app
    ```
 
 2. **Create a virtual environment:**
