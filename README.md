@@ -39,22 +39,42 @@ To set up this project locally, follow these steps:
    pip install -r requirements.txt
    ```
 
-5. **Run the migrations:**
+5. **Create environment configuration:**
+   Create a `.env` file in the project root with the following variables:
+   ```properties
+   allowed_hosts=['']
+   secret_key=
+   debug=True
+   db_name=
+   db_user=
+   db_password=
+   db_host=
+   db_port=
+   ```
+   Note: You can also create `.env.local` or `.env.production` for different environments.
+
+   To generate a new secret key, you can use Python:
+   ```bash
+   python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+   ```
+   Copy the generated key and paste it as the value for `secret_key` in your `.env` file.
+
+6. **Run the migrations:**
    ```bash
    python manage.py migrate
    ```
 
-6. **Create a superuser (optional):**
+7. **Create a superuser (optional):**
    ```bash
    python manage.py createsuperuser
    ```
 
-7. **Run the development server:**
+8. **Run the development server:**
    ```bash
    python manage.py runserver
    ```
 
-8. **Access the application:**
+9. **Access the application:**
    Open your web browser and go to `http://127.0.0.1:8000/`.
 
 ## Usage
@@ -83,11 +103,3 @@ You can access the admin interface at `http://127.0.0.1:8000/admin/` using the s
     3. You should now see an option to create a new post. Click on it to create your post.
 
     Note: Only authenticated staff users can create new posts. Make sure you're logged in to access this feature.
-
-## Dumping and Loading Data
-
-**Load the fixture**: Use the `loaddata` management command to load the fixture into your database.
-
-```bash
-python manage.py loaddata initial_data.json
-```
