@@ -31,7 +31,7 @@ jobs:
         git merge --strategy=ours --no-commit dev
         
         # Checkout files from dev, excluding docker-compose.yml and ./backend/docker/
-        git checkout dev -- . ':!docker-compose.yml' ':!backend/docker/' ':!backend/Dockerfile'
+        git checkout dev -- . ':!docker-compose.yml' ':!Dockerfile' ':!django.sql' '!mysite/settings.py'
         
         # Stage the changes
         git add .
