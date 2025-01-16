@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    command: bash docker-entrypoint.sh
+    volumes:
+      - /app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=${debug}
+    env_file:
+      - .env
+
+networks:
+  django:
+    driver: bridge

@@ -266,3 +266,8 @@ dev/
 # Fichiers et dossiers de la gestion des données de préproduction
 preprodenv/
 *.preprodenv
+
+# Docker
+.docker/
+docker-compose.override.yml
+mysql_data/
