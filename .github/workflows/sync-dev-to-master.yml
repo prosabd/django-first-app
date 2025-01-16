@@ -31,11 +31,11 @@ jobs:
         git merge --strategy=ours --no-commit dev
         
         # Checkout files from dev, excluding docker-compose.yml and ./backend/docker/
-        git checkout dev -- . ':!docker-compose.yml' ':!Dockerfile' ':!django.sql' ':!mysite/settings.py'
+        git checkout dev -- . ':!docker-compose.yml' ':!Dockerfile' ':!django.sql' ':!mysite/settings.py' ':!docker-entrypoint.sh'
         
         # Stage the changes
         git add .
         
         # Commit and push the changes
-        git commit -m "Sync dev to master, excluding docker-compose.yml and ./mysite/settings.py/ and ./django.sql"
+        git commit -m "Sync dev to master, excluding docker-compose.yml and ./mysite/settings.py/ and ./django.sql and docker-entrypoint.sh"
         git push origin master
