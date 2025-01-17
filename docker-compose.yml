@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    command: bash docker-entrypoint.sh
+    volumes:
+      - /app
+    ports:
+      - "8001:8001"
+    environment:
+      - DEBUG=${debug}
+      - db_host=${db_host}
+      - db_port=${db_port}
+      - db_user=${db_user}
+      - db_password=${db_password}
+      - db_name=${db_name}
+    env_file:
+      - .env
+
+networks:
+  django:
+    driver: bridge
+  shared-network:
+    external: true
+    name: shared-network

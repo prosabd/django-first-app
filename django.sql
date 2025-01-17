@@ -78,8 +78,7 @@ CREATE TABLE IF NOT EXISTS "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOI
 CREATE TABLE IF NOT EXISTS "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bo
 ol NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "last_name" varchar(150) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT N
 ULL, "date_joined" datetime NOT NULL, "first_name" varchar(150) NOT NULL);
-INSERT INTO auth_user VALUES(1,'pbkdf2_sha256$600000$cWZZ1qWy36IMA3XU8S5KbK$4O20zP4ZytBtRz8d8iD/n/GVThDYClMGOoNAixXhCNg=','2024-08-27 10:00:13.256142',1,'prosa','','pro
-.sabd@gmail.com',1,1,'2024-08-24 13:33:49.234872','');
+INSERT INTO auth_user VALUES(1,'pbkdf2_sha256$600000$cWZZ1qWy36IMA3XU8S5KbK$4O20zP4ZytBtRz8d8iD/n/GVThDYClMGOoNAixXhCNg=','2024-08-27 10:00:13.256142',1,'prosa','admin','',1,1,'2024-08-24 13:33:49.234872','');
 INSERT INTO auth_user VALUES(2,'pbkdf2_sha256$600000$MTtmUfaxGGcsk1hufqP9Is$A0D19AvdYHmn76QdVBg9sfAqC1dP6++6T0Po7muwXn0=',NULL,0,'user-test','test','',0,1,'2024-08-25 0
 9:06:23','user');
 INSERT INTO auth_user VALUES(3,'pbkdf2_sha256$600000$kEAa25OPnMdAm8sz02UrRO$80O6iLw3On0x70NaNLlbk22W27Fywl7q6jX1OW/3k2o=','2025-01-15 20:25:22.356805',0,'user-staff','s
