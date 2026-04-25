@@ -20,6 +20,3 @@ services:
 networks:
   django:
     driver: bridge
-  shared-network:
-    external: true
-    name: shared-network
