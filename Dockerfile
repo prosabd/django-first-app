@@ -25,7 +25,7 @@ COPY . .
 RUN chmod +x docker-entrypoint.sh
 
 # Expose port
-EXPOSE 8001
+EXPOSE 9001
 
 # Run entrypoint script
 CMD ["./docker-entrypoint.sh"]
