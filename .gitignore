@@ -18,6 +18,7 @@ venv/
 # Fichiers et dossiers de la base de données
 # db.sqlite3
 database.db
+django.sql
 *.db
 initial_data.json
 
