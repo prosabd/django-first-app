@@ -15,6 +15,9 @@ fi
 # Apply migrations
 python manage.py migrate
 
+# Collect static files
+python manage.py collectstatic --noinput
+
 # Create superuser
 python manage.py shell << END
 from django.contrib.auth import get_user_model
@@ -24,4 +27,4 @@ if not User.objects.filter(username='user-admin').exists():
 END
 
 # Start server
-python manage.py runserver 0.0.0.0:8001
+python manage.py runserver 0.0.0.0:8000

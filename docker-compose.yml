@@ -13,6 +13,7 @@ services:
       - db_user=${db_user}
       - db_password=${db_password}
       - db_name=${db_name}
+>>>>>>> 11740b7 (feat: :rocket: docker config for master prod env)
     env_file:
       - .env
 
